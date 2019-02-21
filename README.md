@@ -1,4 +1,5 @@
 #Yahtzee
+
 ##About this Kata
 
 This problem is based on Ruby Quiz #19 ( http://rubyquiz.com/quiz19.html ). The kata takes about 20 minutes with practice and 2 hours in a dojo setting.
