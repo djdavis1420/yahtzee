@@ -95,10 +95,13 @@ def __sum_all_dice(dice):
 
 
 def yahtzee():
+    category = input('What category are you playing? ')
     dice = []
     roll = roll_dice(dice)
-    replace_dice(roll)
+    final_roll = replace_dice(roll)
+    score = get_score(category, final_roll)
+    print(f'Your final score is {score}.')
 
 
-# yahtzee()
+yahtzee()
 
