@@ -1,6 +1,8 @@
 #!/C/Users/djdav/PycharmProjects/yahtzee/venv/Scripts/python
 from random import randint
 from models.dice import Dice
+from src.scoring2 import get_score
+
 
 def play_yahtzee():
     yahtzee = Yahtzee()
@@ -9,7 +11,12 @@ def play_yahtzee():
     while roll_count < 3:
         yahtzee.roll_dice()
         yahtzee.keep_roll()
-    print(f'Rolls: {yahtzee.roll}')
+        roll_count += 1
+    print(f'Final Rolls: {yahtzee.roll}')
+    category = input('What category are you playing? ')
+    score_card = get_score(category, yahtzee.roll)
+    print(f'Your score is {score_card.score()}')
+
 
 
 class Yahtzee:
@@ -25,7 +32,7 @@ class Yahtzee:
         print(f'You rolled {self.roll[0]}, {self.roll[1]}, {self.roll[2]}, {self.roll[3]}, {self.roll[4]}.')
         for dice in self.roll:
             response = input(f'Will you keep your {dice}? Type Y/N. ')
-            dice.keep_value = True if response == 'Y' else False
+            dice.keep_value = True if response.upper() == 'Y' else False
 
     def sum_dice(self):
         total = 0
@@ -34,5 +41,5 @@ class Yahtzee:
         return total
 
 
-# play_yahtzee()
+play_yahtzee()
 
