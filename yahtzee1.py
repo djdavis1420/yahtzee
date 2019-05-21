@@ -1,4 +1,5 @@
-#!/C/Users/djdav/PycharmProjects/yahtzee/venv/Scripts/python
+#!/C/Users/djdav/Development/Python/yahtzee/venv/Scripts/python
+
 import copy
 from random import randint
 from src import scoring1
@@ -38,4 +39,3 @@ def yahtzee():
 
 
 yahtzee()
-

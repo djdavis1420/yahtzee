@@ -1,4 +1,5 @@
-#!/C/Users/djdav/PycharmProjects/yahtzee/venv/Scripts/python
+#!/C/Users/djdav/Development/Python/yahtzee/venv/Scripts/python
+
 from random import randint
 from models.dice import Dice
 from src.scoring2 import get_score
@@ -16,7 +17,6 @@ def play_yahtzee():
     category = input('What category are you playing? ')
     score_card = get_score(category, yahtzee.roll)
     print(f'Your score is {score_card.score()}')
-
 
 
 class Yahtzee:
@@ -42,4 +42,3 @@ class Yahtzee:
 
 
 play_yahtzee()
-
